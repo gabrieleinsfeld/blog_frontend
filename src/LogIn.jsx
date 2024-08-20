@@ -31,6 +31,7 @@ const LogIn = () => {
           setLoggedIn(true);
         }
       } else {
+        alert("Wrong Password");
         console.error("Login failed");
       }
     } catch (error) {

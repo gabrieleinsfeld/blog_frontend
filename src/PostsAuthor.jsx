@@ -46,12 +46,15 @@ const PostsAuthor = () => {
       const token = localStorage.getItem("authToken"); // Assuming you're using a token for auth
 
       try {
-        const response = await fetch(`http://localhost:3000/post/${postId}`, {
-          method: "DELETE",
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        });
+        const response = await fetch(
+          `https://honest-casandra-gabrielsoares-d703f847.koyeb.app/post/${postId}`,
+          {
+            method: "DELETE",
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        );
 
         if (response.ok) {
           alert("Post deleted successfully!");
